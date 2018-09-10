@@ -28,6 +28,7 @@ class CreateEventStoreTable extends Migration
             $table->text('payload');
             $table->string('recorded_on', 32);
             $table->text('type');
+            $table->text('aggregate_type');
 
             $table->unique(['uuid', 'playhead']);
         });
